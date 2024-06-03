@@ -43,11 +43,15 @@ const Messages = () => {
       </Main>
 
       <div className="message-container">
-        {messages.map((m) => (
-          <p key={m.id} className="message">
-            {m.message}
-          </p>
-        ))}
+        {messages.length > 0 ? (
+          messages.map((m) => (
+            <p key={m.id} className="message">
+              {m.message}
+            </p>
+          ))
+        ) : (
+          <p>No messages</p>
+        )}
       </div>
     </div>
   );
